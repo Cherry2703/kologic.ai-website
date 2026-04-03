@@ -1,18 +1,17 @@
 "use client";
 
 import { useCallback } from "react";
-import Particles from "react-particles";
-import { loadSlim } from "tsparticles-slim";
-import type { Engine } from "tsparticles-engine";
+import Particles from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import type { Engine } from "@tsparticles/engine";
 
 export function ParticleBackground() {
   const particlesInit = useCallback(async (engine: Engine) => {
-    // load slim version instead of full to save bundle size
     await loadSlim(engine);
   }, []);
 
   return (
-    <Particles
+    <Particles 
       id="tsparticles"
       init={particlesInit}
       options={{
