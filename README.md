@@ -155,13 +155,12 @@ kologic-website/
 2. **Prop Drilling vs Context:** Global stats (like the chatbot toggle) use Custom Web Events (`window.dispatchEvent(new CustomEvent('chatbot-toggled'))`) to allow sibling/distant components (like the 3D Robot) to react without setting up heavy React Context wrappers at the root.
 3. **Session Management:** Lightweight browser API (`sessionStorage`) dictates whether to show the `GlobalSplash` to prevent repetitive loading screens on internal navigation.
 
+
+clone the repository and npm install and then run the command
+
+ npm run dev || npm start
 ---
 
 
 
 
-
-
-clone the repository and npm install and then run the command
-
- npm run dev || npm start
